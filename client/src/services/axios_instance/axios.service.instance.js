@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const backEndURL = "https://friendly-slow-anorak.glitch.me"
+
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: `${backEndURL}/api`,
     timeout: 7000,
     headers: {
         'Content-Type': 'application/json'

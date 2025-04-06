@@ -1,6 +1,4 @@
 import axiosInstance from "../axios_instance/axios.service.instance";
-import dotenv from 'dotenv';
-dotenv.config();
 
 const backEndURL = "https://friendly-slow-anorak.glitch.me/"
 
