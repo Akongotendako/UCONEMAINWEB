@@ -26,7 +26,7 @@ const userStore = create((set, get) => ({
     age: "32",
     profilePic: {
       url: "",
-      publicId: ""
+      publicId: "",
     },
     phoneNumber: "",
   },
@@ -85,15 +85,15 @@ const userStore = create((set, get) => ({
       set({
         signin: {
           email: response.data.response.email,
-          password: response.data.response.password
+          password: response.data.response.password,
         },
         profile: {
           firstName: response.data.response.profile.firstName,
           lastName: response.data.response.profile.lastName,
           age: response.data.response.profile.age,
           profilePic: response.data.response.profile.profilePic,
-          phoneNumber: response.data.response.profile.phoneNumber
-        }
+          phoneNumber: response.data.response.profile.phoneNumber,
+        },
       });
     } catch (error) {
       return error;
@@ -109,8 +109,10 @@ const userStore = create((set, get) => ({
       formData.append("firstName", get().profile.firstName);
       formData.append("lastName", get().profile.lastName);
       formData.append("age", get().profile.age);
-      if(get().profile.profilePic && get().profile.profilePic.file) {
-        formData.append("profilePic", get().profile.profilePic.file);
+
+      const file = get().profile.profilePic?.file;
+      if (file) {
+        formData.append("profilePic", file);
       }
       formData.append("phoneNumber", get().profile.phoneNumber);
 

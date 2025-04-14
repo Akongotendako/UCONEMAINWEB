@@ -9,7 +9,7 @@ import AdminShopAddItem from "./admin/admin_shop/admin_shop_add_item/AdminShopAd
 import AdminShopMain from "./admin/admin_shop/admin_shop_main/AdminShopMain";
 import AdminShopAll from "./admin/admin_shop/admin_shop_all/AdminShopAll";
 import { Bounce, ToastContainer } from "react-toastify";
-import AdminShopUpdateItem from "./admin/admin_shop/admin_shop_update_item/AdminShopUpdateItem";
+import AdminShopUpdateItem from "./admin/admin_shop/admin_shop_main/admin_shop_update_item/AdminShopUpdateItem";
 import AdminProfile from "./admin/admin-profile/AdminProfile";
 import UserDashboard from "./user/user_dashboard/UserDashboard";
 import UserHome from "./user/user_home/UserHome";
